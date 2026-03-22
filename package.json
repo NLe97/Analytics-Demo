@@ -1,0 +1,53 @@
+{
+  "name": "analytics-dev-data-website",
+  "version": "1.0.0",
+  "description": "Website for generating realistic usage data of a nextjs website with Contentful Analytics",
+  "main": "index.js",
+  "scripts": {
+    "dev": "doppler run -- next dev",
+    "build": "dopplerrun -- next build",
+    "vercel-build": "next build",
+    "start": "doppler run -- next start",
+    "test": "echo \"no test specified\"",
+    "lint": "eslint .",
+    "contentful-typescript-codegen": "doppler run -- contentful-typescript-codegen --output @types/generated/contentful.d.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.27.0",
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^16.1.6",
+    "@contentful/rich-text-types": "^16.2.0",
+    "@ninetailed/experience.js-next": "7.22.0-alpha.1",
+    "@ninetailed/experience.js-node": "7.22.0-alpha.1",
+    "@ninetailed/experience.js-plugin-insights": "7.22.0-alpha.1",
+    "@ninetailed/experience.js-plugin-preview": "7.22.0-alpha.1",
+    "@ninetailed/experience.js-react": "7.22.0-alpha.1",
+    "@ninetailed/experience.js-utils-contentful": "7.22.0-alpha.1",
+    "contentful": "9.1.12",
+    "lodash": "^4.17.21",
+    "next": "14.2.21",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.21",
+    "@types/node": "^24.10.1",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/parser": "^8.51.0",
+    "contentful-management": "^11.65.0",
+    "contentful-typescript-codegen": "3.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "contentful",
+      "unrs-resolver"
+    ]
+  }
+}
